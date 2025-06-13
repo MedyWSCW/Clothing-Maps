@@ -101,10 +101,10 @@ a.active, a:hover {
     display: none;
     position: absolute;
     background-color: #222;
-    min-width: 90px;
+    min-width: 240px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    margin-top: 10px;
+    margin-top: 1px;
     left: 50%;                  
     transform: translateX(-50%);
     border-radius: 3px;
@@ -116,7 +116,7 @@ a.active, a:hover {
 
 .dropdown-content li a {
     color: #fff;
-    padding: 4px 8px;   
+    padding: 10px 36px;   
     text-decoration: none;
     display: block;
     border-radius: 0;
