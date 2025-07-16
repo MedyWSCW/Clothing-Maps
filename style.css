@@ -137,4 +137,33 @@ a.active, a:hover {
     
 }
 
+.information-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(46, 46, 46);
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin : 40px auto;
+    max-width: 700px;
+}
+
+.information-text {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+
+.information-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.product-image {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+    align-items: left;
+}
 
