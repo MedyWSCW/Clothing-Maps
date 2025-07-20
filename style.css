@@ -144,9 +144,9 @@ a.active, a:hover {
     background-color: rgb(46, 46, 46);
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
+    padding: 70px;
     margin : 40px auto;
-    max-width: 700px;
+    max-width: 1000px;
 }
 
 .information-text {
