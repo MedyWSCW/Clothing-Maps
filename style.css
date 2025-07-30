@@ -78,6 +78,8 @@ a.active, a:hover {
 .main-title, .subtitle {
     font-weight: bold;
     font-size: 90px;
+    stroke: #222;
+    stroke-width: 10px;
     color: #ffffff;
     margin-bottom: 10px;
     font-family: monospace;
