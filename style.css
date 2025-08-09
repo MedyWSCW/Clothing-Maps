@@ -61,14 +61,16 @@ a.active, a:hover {
     height: 600px;
     width: 600px;
     margin-top: 40px;
+    border-radius: 10px;
 
  }
 
 .homepage-animated {
     display: flex;
-    align-items: left;
-    justify-content: left;
+    align-items: center;
+    justify-content: center;
     animation: homepageFadeIn 1.2s ease;
+    margin-top: 10px;
 }
 
 @keyframes homepageFadeIn {
@@ -152,6 +154,7 @@ a.active, a:hover {
 }
 .information-box {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     background-color: rgb(46, 46, 46);
@@ -174,7 +177,7 @@ a.active, a:hover {
 .information-text {
     color: rgb(255, 255, 255);
     font-size: 20px;
-    text-align: center;
+    text-align: left;
 }
 
 .information-text h2 {
@@ -192,7 +195,7 @@ a.active, a:hover {
     height: auto;
     border-radius: 10px;
     margin-right: 20px;
-    align-items: left;
+    
 }
 
 
