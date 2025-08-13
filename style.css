@@ -212,9 +212,16 @@ a.active, a:hover {
 }   
 .hoodie-image {
     width: 200px;
-    height: auto;
+    height: 250px;
     border-radius: 20px;
-    margin-right: 55px;
+    margin-right: 95px;
     box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4); 
-
+}
+.jeans-image {
+     width: 200px;
+    height: 280px;
+    border-radius: 20px;
+    margin-right: 65px;
+    box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4); 
+    
 }
