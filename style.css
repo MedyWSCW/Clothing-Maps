@@ -178,6 +178,7 @@ a.active, a:hover {
     color: rgb(255, 255, 255);
     font-size: 20px;
     text-align: left;
+    flex: 1;
 }
 
 .information-text h2 {
@@ -212,16 +213,16 @@ a.active, a:hover {
 }   
 .hoodie-image {
     width: 200px;
-    height: 250px;
+    height: auto;
     border-radius: 20px;
     margin-right: 95px;
     box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4); 
 }
 .jeans-image {
      width: 200px;
-    height: 280px;
+    height: auto;
     border-radius: 20px;
-    margin-right: 65px;
+    margin-right: 95px;
     box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4); 
     
 }
