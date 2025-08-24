@@ -84,7 +84,7 @@ function showResult() {
   else if (tone === "Light" && style === "Formal")
     recommendation = "Light Blue Shirt";
   else if (tone === "Light" && style === "Sporty")
-    recommendation = "White Sneakers";
+    recommendation = "White Compression Shirt";
 
   resultEl.textContent = "Based on your choices, we recommend: " + recommendation;
   resultEl.classList.remove('hidden');
