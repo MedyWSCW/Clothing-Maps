@@ -46,3 +46,52 @@ function showQuestion() {
   resultEl.classList.add('hidden');
   restartBtn.classList.add('hidden');
 }
+
+nextBtn.addEventListener('click', function(){
+  if (!answers[current]) {
+    alert('Please pick an option.');
+    return;
+  }
+
+  current++;
+  if (current < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
+});
+
+function showResult() {
+  var tone = answers[0] || '';
+  var style = answers[1] || '';
+  var itemPick = answers[2] || '';
+
+  var recommendation = "Based on your choices, we recommend a ";
+  if (tone === "Dark:" && style === "Casual") 
+    recommendation = "Black Hoodie";
+  else if (tone === "Dark:" && style === "Formal")
+    recommendation = "Black Blazer";
+  else if (tone === "Dark:" && style === "Sporty")
+    recommendation = "Black Joggers";
+  else if (tone === "Neutral" && style === "Casual")
+    recommendation = "Beige Chinos";
+  else if (tone === "Neutral" && style === "Formal")
+    recommendation = "Grey Suit";
+  else if (tone === "Neutral" && style === "Sporty")
+    recommendation = "Grey Sweatshirt";
+  else if (tone === "Light" && style === "Casual")
+    recommendation = "White T-Shirt";
+  else if (tone === "Light" && style === "Formal")
+    recommendation = "Light Blue Shirt";
+  else if (tone === "Light" && style === "Sporty")
+    recommendation = "White Sneakers";
+
+  
+
+
+
+
+
+
+
+}
