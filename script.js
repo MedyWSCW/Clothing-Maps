@@ -67,11 +67,11 @@ function showResult() {
   var itemPick = answers[2] || '';
 
   var recommendation = "Based on your choices, we recommend a ";
-  if (tone === "Dark:" && style === "Casual") 
+  if (tone === "Dark" && style === "Casual") 
     recommendation = "Black Hoodie";
-  else if (tone === "Dark:" && style === "Formal")
+  else if (tone === "Dark" && style === "Formal")
     recommendation = "Black Blazer";
-  else if (tone === "Dark:" && style === "Sporty")
+  else if (tone === "Dark" && style === "Sporty")
     recommendation = "Black Joggers";
   else if (tone === "Neutral" && style === "Casual")
     recommendation = "Beige Chinos";
@@ -86,12 +86,31 @@ function showResult() {
   else if (tone === "Light" && style === "Sporty")
     recommendation = "White Sneakers";
 
-  
+  resultEl.textContent = "Based on your choices, we recommend: " + recommendation;
+  resultEl.classList.remove('hidden');
+  restartBtn.classList.remove('hidden');
 
-
-
-
-
-
-
+  questionsEl.textContent = '';
+  choicesEl.innerHTML = '';
+  nextBtn.disabled = true; 
 }
+
+  restartBtn.addEventListener('click', function(){
+  current = 0;
+  answers = [];
+  showQuestion();
+  });
+
+  showQuestion();
+
+
+
+
+
+
+
+
+
+
+
+

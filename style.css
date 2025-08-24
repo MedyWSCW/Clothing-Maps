@@ -251,7 +251,51 @@ a.active, a:hover {
     margin-bottom: 14px; 
 }
 
-#choices { display: grid; 
+#choices { 
+    display: grid; 
     gap: 10px; 
     margin-bottom: 14px; 
+}
+
+.choice-btn {
+    background: #444;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.choice-btn.selected,
+.choice-btn:hover {
+    background: #979797;
+    color: #222;
+}
+
+#nextBtn, #restartBtn {
+    background: #979797;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px 5px;
+}
+
+#nextBtn:disabled {
+    background: #444;
+    color: #aaa;
+    cursor: not-allowed;
+}
+
+#result {
+    color: #fff;
+    font-size: 20px;
+    margin-top: 18px;
+}
+
+.hidden {
+    display: none;
 }
