@@ -286,7 +286,7 @@ a.active, a:hover {
 
 #nextBtn:disabled {
     background: #444;
-    color: #aaa;
+    color: #ffffff;
     cursor: not-allowed;
 }
 

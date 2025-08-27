@@ -72,13 +72,13 @@ function showResult() {
   else if (tone === "Dark" && style === "Formal")
     recommendation = "Black Blazer";
   else if (tone === "Dark" && style === "Sporty")
-    recommendation = "Black Joggers";
+    recommendation = "Black Shorts";
   else if (tone === "Neutral" && style === "Casual")
-    recommendation = "Beige Chinos";
+    recommendation = "Grey Jeans";
   else if (tone === "Neutral" && style === "Formal")
     recommendation = "Grey Suit";
   else if (tone === "Neutral" && style === "Sporty")
-    recommendation = "Grey Sweatshirt";
+    recommendation = "Grey Sweatpants";
   else if (tone === "Light" && style === "Casual")
     recommendation = "White T-Shirt";
   else if (tone === "Light" && style === "Formal")
