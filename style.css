@@ -218,6 +218,8 @@ a.active, a:hover {
     margin-right: 95px;
     box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4); 
 }
+
+
 .jeans-image {
      width: 200px;
     height: auto;
@@ -225,6 +227,34 @@ a.active, a:hover {
     margin-right: 95px;
     box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4); 
     
+}
+
+.Tshirt-image {
+     width: 200px;
+    height: 250px;
+    border-radius: 20px;
+    margin-right: 95px;
+    box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4); 
+    
+}
+
+
+.Tshirt-image1 {
+     width: 200px;
+    height: 230px;
+    border-radius: 20px;
+    margin-right: 95px;
+    box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4);     
+
+    
+}
+
+.Tshirt-image2 {
+     width: 200px;
+    height: 270px;
+    border-radius: 20px;
+    margin-right: 95px;
+    box-shadow: 0 4px 16px 0 rgba(255,255,255,0.4);  
 }
 
 /* Java Script */
@@ -298,4 +328,8 @@ a.active, a:hover {
 
 .hidden {
     display: none;
+}
+
+.gap {
+    height: 24px; 
 }
