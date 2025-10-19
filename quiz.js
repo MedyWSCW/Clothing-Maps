@@ -66,6 +66,16 @@ function showResult() {
   var style = answers[1] || '';
   var itemPick = answers[2] || '';
 
+  resultEl.textContent = "Based on your choices, we recommend: " + recommendation;
+  resultEl.classList.remove('hidden');
+  restartBtn.classList.remove('hidden');
+
+  questionsEl.textContent = '';
+  choicesEl.innerHTML = '';
+  nextBtn.disabled = true;
+  nextBtn.classList.add('hidden')
+
+
   var recommendation = "Based on your choices, we recommend a ";
   if (tone === "Dark" && style === "Casual") 
     recommendation = "Black Hoodie";
