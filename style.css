@@ -72,14 +72,14 @@ a.active, a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: homepageFadeIn 1.2s ease;
+    animation: homepageFadeIn 0.7s ease;
     margin-top: 10px;
 }
 
 @keyframes homepageFadeIn {
     from {
         opacity: 0;
-        transform: translateY(40px) scale(0.95);
+        transform: translateY(40px) scale(0.99);
     }
     to {
         opacity: 1;
