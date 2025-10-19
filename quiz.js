@@ -1,3 +1,5 @@
+
+// quiz.js
 var questions = [
     {
         q: "What tones do you like?",
@@ -13,6 +15,8 @@ var questions = [
     }
 ];
 
+
+// State variables
 var current = 0;
 var answers = [];
 
@@ -47,6 +51,7 @@ function showQuestion() {
   restartBtn.classList.add('hidden');
 }
 
+// Next button handler
 nextBtn.addEventListener('click', function(){
   if (!answers[current]) {
     alert('Please pick an option.');
@@ -75,7 +80,7 @@ function showResult() {
   nextBtn.disabled = true;
   nextBtn.classList.add('hidden')
 
-
+// Generate recommendation based on answers
   var recommendation = "Based on your choices, we recommend a ";
   if (tone === "Dark" && style === "Casual") 
     recommendation = "Black Hoodie";
@@ -104,7 +109,7 @@ function showResult() {
   choicesEl.innerHTML = '';
   nextBtn.disabled = true; 
 }
-
+// Restart button handler
   restartBtn.addEventListener('click', function(){
   current = 0;
   answers = [];
