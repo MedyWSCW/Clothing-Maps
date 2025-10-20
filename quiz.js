@@ -1,20 +1,18 @@
 
-// quiz.js
 var questions = [
-    {
-        q: "What tones do you like?",
-        choices: ["Dark", "Neutral", "Light"]
-    },
-    {
-        q: "What type of clothing do you prefer?",
-        choices: ["Casual", "Formal", "Sporty"]
-    },
-    {
-        q: "What length do you prefer?",
-        choices: ["Cropped", "Regular", "Baggy"]
-    }
+  {
+    q: "What tones do you like?",
+    choices: ["Dark", "Neutral", "Light"]
+  },
+  {
+    q: "What type of clothing do you prefer?",
+    choices: ["Casual", "Formal", "Sporty"]
+  },
+  {
+    q: "What length do you prefer?",
+    choices: ["Cropped", "Regular", "Baggy"]
+  }
 ];
-
 
 // State variables
 var current = 0;
@@ -27,23 +25,25 @@ var resultEl    = document.getElementById('result');
 var restartBtn  = document.getElementById('restartBtn');
 
 function showQuestion() {
-    var q = questions[current];
-    questionsEl.textContent = q.q;
-    choicesEl.innerHTML = '';
-    nextBtn.disabled = true;
-    for (var i = 0; i < q.choices.length; i++) {
-        var b = document.createElement('button');
-        b.textContent = q.choices[i];
-        b.className = 'choice-btn';
-         (function(idx, btn){
-      btn.addEventListener('click', function(){
+  var q = questions[current];
+  questionsEl.textContent = q.q;
+  choicesEl.innerHTML = '';
+  nextBtn.disabled = true;
+  nextBtn.classList.remove('hidden'); 
+  for (var i = 0; i < q.choices.length; i++) {
+    var b = document.createElement('button');
+    b.textContent = q.choices[i];
+    b.className = 'choice-btn';
+
+    (function(idx, btn) {
+      btn.addEventListener('click', function() {
         var all = choicesEl.querySelectorAll('.choice-btn');
         for (var j = 0; j < all.length; j++) all[j].classList.remove('selected');
         btn.classList.add('selected');
         answers[current] = q.choices[idx];
         nextBtn.disabled = false;
       });
-      })(i, b);
+    })(i, b);
     choicesEl.appendChild(b);
   }
 
@@ -52,7 +52,7 @@ function showQuestion() {
 }
 
 // Next button handler
-nextBtn.addEventListener('click', function(){
+nextBtn.addEventListener('click', function() {
   if (!answers[current]) {
     alert('Please pick an option.');
     return;
@@ -71,17 +71,10 @@ function showResult() {
   var style = answers[1] || '';
   var itemPick = answers[2] || '';
 
-  resultEl.textContent = "Based on your choices, we recommend: " + recommendation;
-  resultEl.classList.remove('hidden');
-  restartBtn.classList.remove('hidden');
 
-  questionsEl.textContent = '';
-  choicesEl.innerHTML = '';
-  nextBtn.disabled = true;
-  nextBtn.classList.add('hidden')
-
-// Generate recommendation based on answers
   var recommendation = "Based on your choices, we recommend a ";
+
+  // Generate recommendation based on answers
   if (tone === "Dark" && style === "Casual") 
     recommendation = "Black Hoodie";
   else if (tone === "Dark" && style === "Formal")
@@ -108,17 +101,18 @@ function showResult() {
   questionsEl.textContent = '';
   choicesEl.innerHTML = '';
   nextBtn.disabled = true; 
+  nextBtn.classList.add('hidden'); // hide only during result screen
 }
+
 // Restart button handler
-  restartBtn.addEventListener('click', function(){
+restartBtn.addEventListener('click', function() {
   current = 0;
   answers = [];
   showQuestion();
-  });
+});
 
-  showQuestion();
-
-
+// Start the quiz
+showQuestion();
 
 
 
